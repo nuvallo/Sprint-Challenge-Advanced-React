@@ -7,7 +7,6 @@ function PlayerList({ players }) {
       {players.map(player => (
         <PlayerCard name={player.name} />
       ))}
-      {console.log(players)}
     </div>
   );
 }
