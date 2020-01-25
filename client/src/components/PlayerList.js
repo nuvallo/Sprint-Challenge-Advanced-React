@@ -1,9 +1,15 @@
 import React from "react";
+import PlayerCard from "./PlayerCard";
 
-class PlayerList extends React.Component {
-  render() {
-    return null;
-  }
+function PlayerList({ players }) {
+  return (
+    <div>
+      {players.map(player => (
+        <PlayerCard name={player.name} />
+      ))}
+      {console.log(players)}
+    </div>
+  );
 }
 
 export default PlayerList;

@@ -1,22 +1,21 @@
 import React from "react";
 import NavBar from "./components/Navigation";
-import PlayerCard from "./components/PlayerCard";
-import axios from "axios";
+import PlayerList from "./components/PlayerList";
 import "./App.css";
 
 class App extends React.Component {
-  state = {
-    players: []
-  };
+  constructor() {
+    super();
+    this.state = {
+      player: []
+    };
+  }
 
   componentDidMount() {
-    axios
-      .get(`http://localhost:5000/api/players`)
-      .then(player => {
-        this.setState({
-          players: [player.data]
-        });
-        console.log(player.data);
+    fetch("http://localhost:5000/api/players")
+      .then(res => res.json())
+      .then(data => {
+        this.setState({ player: data });
       })
       .catch(error => console.log(error));
   }
@@ -24,7 +23,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavBar />
-        <PlayerCard />
+        <PlayerList players={this.state.player} />
       </div>
     );
   }
