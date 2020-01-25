@@ -1,0 +1,22 @@
+.card {
+  max-width: 500px;
+  margin: 5% auto;
+  padding: 20px;
+}
+
+.toggled {
+  right: 18px;
+}
+
+.dark-mode {
+  color: #333;
+  background-color: #313843;
+}
+
+.dark-mode h2 {
+  background-color: black;
+}
+
+.dark-mode h3 {
+  background-color: black;
+}
