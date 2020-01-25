@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "./components/Navigation";
+import PlayerCard from "./components/PlayerCard";
 import axios from "axios";
 import "./App.css";
 
@@ -21,8 +22,9 @@ class App extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="App">
         <NavBar />
+        <PlayerCard />
       </div>
     );
   }

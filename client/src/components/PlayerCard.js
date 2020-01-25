@@ -1,8 +1,17 @@
 import React from "react";
+import { Card, CardTitle } from "reactstrap";
 
 class PlayerCard extends React.Component {
   render() {
-    return null;
+    return (
+      <div>
+        <Card className="card">
+          <CardTitle>
+            <strong>Player</strong>
+          </CardTitle>
+        </Card>
+      </div>
+    );
   }
 }
 
